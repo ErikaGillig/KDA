@@ -1,6 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
 
+const {SERVER_URI} = process.env;
+
 const Contacto = (props) => {
   const initialForm = {
     nombre: "",
@@ -24,8 +26,9 @@ const Contacto = (props) => {
     e.preventDefault();
     setMsg("");
     setSending(true);
+    const uri = `${SERVER_URI}/api/contacto`;
     const response = await axios.post(
-      "http://localhost:3000/api/contacto",
+      uri,
       formData
     );
     setSending(false);
