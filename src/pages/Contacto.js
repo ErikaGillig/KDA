@@ -1,5 +1,9 @@
 import { useState } from "react";
 import axios from "axios";
+import Header from "../components/layout/Header";
+import Nav from "../components/layout/Nav";
+import Footer from "../components/layout/Footer.js";
+
 
 const {SERVER_URI} = process.env;
 
@@ -39,8 +43,11 @@ const Contacto = (props) => {
   };
   return (
     <main className="holder">
-      <h1> Registrate para seguir al tanto de las novedades </h1>
-      <div>
+      <Header />
+      <Nav />
+      
+      <h1 className="titulo"> Registrate para seguir al tanto de las novedades </h1>
+      <div className="container">
         <form
           action="contacto"
           method="post"
@@ -81,7 +88,9 @@ const Contacto = (props) => {
         {sending ? <p>Enviando...</p> : null}
         {msg ? <p>{msg}</p> : null}
       </div>
-      )
+      
+      <Footer />
+    
     </main>
   );
 };
