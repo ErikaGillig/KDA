@@ -1,0 +1,16 @@
+.titulo {
+    font-family: 'Italianno', cursive;
+    font-size: 250%;
+    text-align: center;
+    color: rgb(106, 240, 250)
+    }
+
+.gallery{
+    width: 80%;
+    margin: 60px auto;
+    display: -moz-grid-line;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 400px);
+}
+
+

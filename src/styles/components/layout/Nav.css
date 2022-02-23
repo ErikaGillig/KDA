@@ -1,0 +1,33 @@
+nav{
+    background-color: turquoise;
+    margin-bottom: 3em;
+
+}
+
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+nav ul li{
+    display: inline-block;
+    width: 20%;
+   
+}
+
+nav ul li a{
+    color:rgb(241, 74, 177);
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    padding: 0.5em 0.5em;
+}
+
+nav ul li a:hover{
+    background-color: blueviolet;
+}
+
+nav ul li a.activo{
+    background-color: rgb(165, 122, 233);
+}

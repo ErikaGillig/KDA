@@ -1,0 +1,17 @@
+header{
+    background: url(/public/img/header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1em 1em;
+
+}
+header h1{
+    Color: rgb(60, 49, 211);
+    font-family: 'Italianno', cursive;
+    font-size: 3em;
+    font-weight: 100;
+    display: inline-block;
+    
+    bottom: 30px;
+    
+}

@@ -1,0 +1,50 @@
+body {
+    background: url(/public/img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Open Sans' sans-serif; 
+    font-size: 20px;
+    line-height: 16px;
+
+}
+.holder{
+    max-width: 980px;
+    margin: 0 auto;
+    
+}
+
+h2{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    margin-top: 1px;
+    margin: 0 0 1em;;
+    color: hotpink;
+
+}
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.homeimg{
+    margin-bottom: 1.5em;
+
+}
+
+.bienvenidos .redessociales{
+    box-sizing: border-box ;
+}
+
+.bienvenidos{
+    width: 75%;
+    padding-right: 2em;
+
+}
+
+.redessociales{
+    width: 25%;
+
+}
