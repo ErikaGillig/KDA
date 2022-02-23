@@ -1,68 +1,86 @@
-import Header from '../components/layout/Header';
-import Nav from '../components/layout/Nav';
-import Footer from '../components/layout/Footer.js';
-import { Form, Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
-import { useState } from 'react';
-import axios from 'axios';
-//import '../styles/pages/Contacto';
+import { useState } from "react";
+import axios from "axios";
 
 const Contacto = (props) => {
-
   const initialForm = {
-    nombre: '',
-    email: '',
-    mensaje: ''
-  }
+    nombre: "",
+    email: "",
+    mensaje: "",
+  };
 
   const [sending, setSending] = useState(false);
-  const [msg, setMsg] = useState('');
-  const [formData, setFormData ] = useState(initialForm);
+  const [msg, setMsg] = useState("");
+  const [formData, setFormData] = useState(initialForm);
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(oldData =>({
+    setFormData((oldData) => ({
       ...oldData,
-      [name]: value
+      [name]: value,
     }));
-  }
+  };
 
-  const handleSubmit = async e => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setMsg('');
+    setMsg("");
     setSending(true);
-    const response = await axios.post('http://localhost:3000/api/contacto', formData);
+    const response = await axios.post(
+      "http://localhost:3000/api/contacto",
+      formData
+    );
     setSending(false);
     setMsg(response.data.message);
-    if(response.data.error === false) {
-      setFormData(initialForm)
+    if (response.data.error === false) {
+      setFormData(initialForm);
     }
-  }
+  };
   return (
     <main className="holder">
       <h1> Registrate para seguir al tanto de las novedades </h1>
       <div>
-        <form action="contacto" method="post" className="formulario" onSubmit={handleSubmit}>
+        <form
+          action="contacto"
+          method="post"
+          className="formulario"
+          onSubmit={handleSubmit}
+        >
           <p>
             <label for="nombre"> Nombre: </label>
-            <input type="text" name="nombre" value={formData.nombre} onChange={handleChange}/>
+            <input
+              type="text"
+              name="nombre"
+              value={formData.nombre}
+              onChange={handleChange}
+            />
           </p>
           <p>
             <label for="email"> Email: </label>
-            <input type="text" name="email" value={formData.email} onChange={handleChange}/>
+            <input
+              type="text"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+            />
           </p>
           <p>
             <label for="mensaje"> Mensaje: </label>
-            <textarea type="text" name="mensaje" value={formData.mensaje} onChange={handleChange}></textarea>
+            <textarea
+              type="text"
+              name="mensaje"
+              value={formData.mensaje}
+              onChange={handleChange}
+            ></textarea>
           </p>
-        <p className="acciones"><input type="submit" value="enviar"/></p>
+          <p className="acciones">
+            <input type="submit" value="enviar" />
+          </p>
         </form>
         {sending ? <p>Enviando...</p> : null}
-        {msg ? <p>{msg}</p>: null}
+        {msg ? <p>{msg}</p> : null}
       </div>
       )
-  </main>
-  )}
-  
+    </main>
+  );
+};
 
-
-export default Contacto
+export default Contacto;
