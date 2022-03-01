@@ -5,8 +5,6 @@ import Nav from "../components/layout/Nav";
 import Footer from "../components/layout/Footer.js";
 
 
-const {SERVER_URI} = process.env;
-
 const Contacto = (props) => {
   const initialForm = {
     nombre: "",
@@ -30,9 +28,8 @@ const Contacto = (props) => {
     e.preventDefault();
     setMsg("");
     setSending(true);
-    const uri = `${SERVER_URI}/api/contacto`;
-    const response = await axios.post(
-      uri,
+    
+    const response = await axios.post( 'http://localhost:3000/api/contacto',
       formData
     );
     setSending(false);
@@ -42,19 +39,20 @@ const Contacto = (props) => {
     }
   };
   return (
-    <main class="holder">
+    <main>
       <Header />
       <Nav />
-      
+     
       <h1 className="titulo"> Registrate para seguir al tanto de las novedades </h1>
-      <div className="container">
-        <form
+      <div class="container">
+        <div class="cajitanew">
+        <form 
           action="contacto"
           method="post"
           className="formulario"
           onSubmit={handleSubmit}
         >
-          <p>
+          <p class="items">
             <label htmlFor="nombre"> Nombre: </label>
             <input
               type="text"
@@ -63,7 +61,7 @@ const Contacto = (props) => {
               onChange={handleChange}
             />
           </p>
-          <p>
+          <p class="items">
             <label htmlFor="email"> Email: </label>
             <input
               type="text"
@@ -72,7 +70,7 @@ const Contacto = (props) => {
               onChange={handleChange}
             />
           </p>
-          <p>
+          <p class="items">
             <label htmlFor="mensaje"> Mensaje: </label>
             <textarea
               type="text"
@@ -81,13 +79,17 @@ const Contacto = (props) => {
               onChange={handleChange}
             ></textarea>
           </p>
-          <p className="acciones">
+          <p>
             <input type="submit" value="enviar" />
           </p>
         </form>
         {sending ? <p>Enviando...</p> : null}
         {msg ? <p>{msg}</p> : null}
-      </div>
+        </div>
+        </div>
+        
+        
+     
       
       <Footer />
     
