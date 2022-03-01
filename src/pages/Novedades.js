@@ -6,16 +6,16 @@ import "../styles/pages/Novedades.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-const { SERVER_URI } = process.env;
+//const { SERVER_URI } = process.env;
 
 const Novedades = () => {
   const [novedades, setNovedades] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const backendUri = `${SERVER_URI}/api/novedades`;
+  //const backendUri = `${SERVER_URI}/api/novedades`;
 
   const getNovedades = async () => {
-    const { data } = await axios.get(backendUri);
+    const { data } = await axios.get('http://localhost:3000/api/novedades');
     setLoading(false);
     setNovedades(data);
   };

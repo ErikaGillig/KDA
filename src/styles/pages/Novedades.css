@@ -1,41 +1,27 @@
-.card-text{
-    font-family: 'Open Sans', sans-serif;
-    text-align: center;
-    color: violet
-}
-.card-title {
-    font-family: 'Italianno', cursive;
-    font-size: 250%;
-    text-align: center;
-    color: rgb(106, 204, 250)
-}
-.titulo .subtitulo {
-    font-family: 'Italianno', cursive;
-    font-size: 250%;
-    text-align: center;
-    color: rgb(250, 106, 207)
-    }
-    
+   
 .novedades{
-        width: 50%;
-        max-width: 700px;
-        height: 300px;
-        display: inline;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: auto;
-        margin-left: 55px;
-        margin-bottom: 500px;
+    width: 60%;
+    margin-left: 5em;
+    max-width: 600px;
+    height: 400px;
+    display:inline-table;
+    flex-grow:unset;
+    
     }
-.noticias img{
-        width: 300px;
-        height: 200px;
-    }
-
-.noticias h1{
-    font-family: 'Italianno', cursive;
-    font-size: 250%;
-    text-align: left;
-    color: rgb(156, 106, 250)
+.cajita{
+    background-color: aliceblue;
+    width: 850px;
+    height: 800px;
+    border-radius: 50px;
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    display:inline-table;
 }
+.photo{
+    text-align: center;
+    
+}
+
+
 

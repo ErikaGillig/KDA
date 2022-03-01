@@ -42,7 +42,7 @@ const Contacto = (props) => {
     }
   };
   return (
-    <main className="holder">
+    <main class="holder">
       <Header />
       <Nav />
       
@@ -55,7 +55,7 @@ const Contacto = (props) => {
           onSubmit={handleSubmit}
         >
           <p>
-            <label for="nombre"> Nombre: </label>
+            <label htmlFor="nombre"> Nombre: </label>
             <input
               type="text"
               name="nombre"
@@ -64,7 +64,7 @@ const Contacto = (props) => {
             />
           </p>
           <p>
-            <label for="email"> Email: </label>
+            <label htmlFor="email"> Email: </label>
             <input
               type="text"
               name="email"
@@ -73,7 +73,7 @@ const Contacto = (props) => {
             />
           </p>
           <p>
-            <label for="mensaje"> Mensaje: </label>
+            <label htmlFor="mensaje"> Mensaje: </label>
             <textarea
               type="text"
               name="mensaje"
