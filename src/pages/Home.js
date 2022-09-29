@@ -1,4 +1,4 @@
-import Header from "../components/layout/Header";
+import Header from "../components/layout/Header.js";
 import Nav from "../components/layout/Nav";
 import Footer from "../components/layout/Footer.js";
 import "../styles/pages/Home.css";

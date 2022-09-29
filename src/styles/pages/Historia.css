@@ -6,7 +6,17 @@
 .historiaimg{
     margin-bottom: 1.5em;
     display: -moz-grid-line;
+    margin-left: 25%;
+    background-color: linear-gradient(60seg,
+    violet, pink, blue, ); 
 }
+@keyframes gradient-animation{
+    50% {
+        background-position: 100% 50%;
+
+    }
+}
+
 .historia h2{
     margin-top: 0.5em;
     text-align: center;

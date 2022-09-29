@@ -24,17 +24,23 @@
 }
 
 .cajitanew { 
-    background-color: aqua;
-    border-radius: 10px;
-    margin-left: 22em;
+    display: flex;
+    border-radius: 100px;
+    margin-left: 35%;
+    background-color: rgba(107, 42, 238, 0.625);
     width: 400px;
     height: 400px;
-    display:flex;
-    flex-wrap: wrap;
 }
+
 .cajitanew .items {
     margin-left: 35px;
     margin-top: 50px;
-    text-align:start;
-    font-style: italic;
+    text-align:center;
+    
+
+}
+
+.button {
+    margin-top: 13%;
+    margin-left: 48%;
 }
