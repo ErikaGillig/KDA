@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/KDA/static/css/main.20ca7076.css",
+    "main.js": "/KDA/static/js/main.d8da4849.js",
+    "static/media/header.jpg": "/KDA/static/media/header.62ecd38df9920042f1d4.jpg",
+    "static/media/fondo.jpg": "/KDA/static/media/fondo.249621940d8fcf09f663.jpg",
+    "index.html": "/KDA/index.html",
+    "main.20ca7076.css.map": "/KDA/static/css/main.20ca7076.css.map",
+    "main.d8da4849.js.map": "/KDA/static/js/main.d8da4849.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.20ca7076.css",
+    "static/js/main.d8da4849.js"
+  ]
+}
